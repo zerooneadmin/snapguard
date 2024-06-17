@@ -21,6 +21,8 @@ import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import Image from 'next/image';
+
 
 export function Component() {
   return (
@@ -71,11 +73,11 @@ export function Component() {
                   </Link>
                 </div>
               </div>
-              <img
+              <Image src="/placeholder.svg"
                 alt="Hero"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
                 height="550"
-                src="/placeholder.svg"
+                
                 width="550" />
             </div>
           </div>
@@ -101,11 +103,10 @@ export function Component() {
             </div>
             <div
               className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <img
+              <Image  src="/placeholder.svg"
                 alt="Features"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
                 height="310"
-                src="/placeholder.svg"
                 width="550" />
               <div className="flex flex-col justify-center space-y-4">
                 <ul className="grid gap-6">
