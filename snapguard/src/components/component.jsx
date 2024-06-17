@@ -172,7 +172,7 @@ export function Component() {
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Get in Touch</h2>
               <p
                 className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Have a question or need more information? Contact us and we'll be happy to assist you.
+                Have a question or need more information? Contact us and we&apos;ll be happy to assist you.
               </p>
             </div>
             <div className="w-full max-w-md space-y-4">
