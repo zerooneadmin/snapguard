@@ -17,17 +17,24 @@ To read more about using these font, please visit the Next.js documentation:
 - App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
-import Link from "next/link"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 import Image from 'next/image';
+import placeholder from "@/assets/pl.png";
+import Head from 'next/head';
+
 
 
 export function Component() {
   return (
     (
     <div className="flex flex-col min-h-[100dvh]">
+      <Head>
+        <title>SnapGuard: Ultimate Solution for Screenshot and Screen Recording Protection</title>
+        <meta name="description" content="Secure your digital content with SnapGuard's easy-to-integrate protection against unauthorized screenshots and screen recordings. Get a personalized quote today." />
+      </Head>
       <main className="flex-1 xl:px-10 bg-black">
 
         <section className="w-full py-12 md:py-24 lg:py-32">
@@ -52,7 +59,7 @@ export function Component() {
                   </Link>
                 </div>
               </div>
-              <Image src="/placeholder.svg"
+              <Image src={placeholder}
                 alt="Hero"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
                 height="550"
@@ -62,27 +69,26 @@ export function Component() {
           </div>
         </section>
         <section
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 lg:px-40"
           id="features">
           <div className="container px-4 md:px-6">
             <div
-              className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
+              className="flex flex-col items-center justify-center space-y-4 text-center lg:px-40">
+              <div className="space-y-2 xl:px-20">
                 <div
                   className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
                   Key Features
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Protect Your Content with Ease</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Prevent Screen Captures and Protect Your content with ease..</h2>
                 <p
-                  className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Our content protection solution is designed to work seamlessly with any web or mobile application,
-                  providing a customizable and comprehensive shield against unauthorized screen captures and recordings.
+                  className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 ">
+                  Our anti screen capture solution is designed for content protection and works seamlessly with any web or mobile application. It provides a customizable and comprehensive shield against unauthorized screen captures and recordings.
                 </p>
               </div>
             </div>
             <div
               className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <Image  src="/placeholder.svg"
+              <Image src={placeholder}
                 alt="Features"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
                 height="310"
@@ -102,8 +108,7 @@ export function Component() {
                     <div className="grid gap-1">
                       <h3 className="text-xl font-bold">Easy Integration</h3>
                       <p className="text-gray-500 dark:text-gray-400">
-                        Integrate our content protection with just a few lines of code, and start safeguarding your
-                        valuable content.
+                      Integrate our screen recording blocker and start safeguarding your valuable content.
                       </p>
                     </div>
                   </li>
@@ -120,17 +125,16 @@ export function Component() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 border-t" id="pricing">
+        <section className="w-full py-12 md:py-24 lg:py-32 border-t lg:px-40" id="pricing">
           <div
-            className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+            className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:px-10">
             <div className="space-y-3">
               <div
                 className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Pricing</div>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Flexible Pricing for Your Needs</h2>
               <p
                 className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Our content protection solution offers customizable pricing to fit your specific requirements. Get a
-                personalized quote to find the perfect plan for your business.
+                Our content protection solution, which prevents screen capturing on any device, offers customizable pricing to fit your specific requirements. Get a personalized quote to find the perfect plan for your business.
               </p>
             </div>
             <div className="flex justify-center">
@@ -147,7 +151,7 @@ export function Component() {
           className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 lg:px-40"
           id="contact">
           <div
-            className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10 lg:px-40">
+            className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-40 lg:px-40">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Get in Touch</h2>
               <p
