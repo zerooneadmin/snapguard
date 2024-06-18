@@ -26,35 +26,14 @@ import Image from 'next/image';
 
 export function Component() {
   return (
-    (<div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
-          <ShieldIcon className="h-6 w-6" />
-          <span className="sr-only">Content Shield</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#">
-            Features
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#">
-            Pricing
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#">
-            Contact
-          </Link>
-        </nav>
-      </header>
-      <main className="flex-1">
-        <section className="w-full pt-12 md:pt-24 lg:pt-32 xl:pt-40">
-          <div className="container px-4 md:px-6">
+    (
+    <div className="flex flex-col min-h-[100dvh]">
+      <main className="flex-1 xl:px-10 bg-black">
+
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6 max-w-screen-xl mx-auto ">
             <div
-              className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+              className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12  xl:pr-10 ">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1
@@ -75,7 +54,7 @@ export function Component() {
               </div>
               <Image src="/placeholder.svg"
                 alt="Hero"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
                 height="550"
                 
                 width="550" />
@@ -163,11 +142,12 @@ export function Component() {
             </div>
           </div>
         </section>
+
         <section
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 lg:px-40"
           id="contact">
           <div
-            className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+            className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10 lg:px-40">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Get in Touch</h2>
               <p
@@ -188,18 +168,7 @@ export function Component() {
           </div>
         </section>
       </main>
-      <footer
-        className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Content Shield. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-        </nav>
-      </footer>
+    
     </div>)
   );
 }
