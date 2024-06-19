@@ -6,7 +6,7 @@ import Image from "next/image";
 function Navbar() {
   return (
     <main>
-      <div className="navbar bg-black border-b-2 border-customYellow text-white">
+      <div className="navbar fixed top-0 left-0 w-full bg-white border-b-2 border-customYellow text-black z-50">
         <div className="navbar-start">
           <div>
             {/* <Image
@@ -37,38 +37,36 @@ function Navbar() {
             </div>
             <ul
               tabIndex="0"
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium card card-compact bg-black "
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 font-medium card card-compact bg-white"
             >
               <li>
-                <Link href="/">Home</Link>
+                <Link href="#home">Home</Link>
               </li>
               <li>
-                <Link href="#">Features</Link>
+                <Link href="#features">Features</Link>
               </li>
               <li>
-                <Link href="#">Pricing</Link>
+                <Link href="#pricing">Pricing</Link>
               </li>
-
               <li>
-                <Link href="#">Contact</Link>
+                <Link href="#contact">Contact</Link>
               </li>
             </ul>
           </div>
         </div>
-        <div className="navbar-end hidden lg:flex font-semibold bg-black">
-          <ul className="menu menu-horizontal px-1 ">
+        <div className="navbar-end hidden lg:flex font-semibold bg-white">
+          <ul className="menu menu-horizontal px-1">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="#home">Home</Link>
             </li>
             <li>
-              <Link href="#">Features</Link>
+              <Link href="#features">Features</Link>
             </li>
             <li>
-              <Link href="#">Pricing</Link>
+              <Link href="#pricing">Pricing</Link>
             </li>
-
             <li>
-              <Link href="#">Contact</Link>
+              <Link href="#contact">Contact</Link>
             </li>
           </ul>
         </div>
