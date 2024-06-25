@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-// import Logo from "@/assets/logo.svg";
+import Logo from "@/assets/Snapguard logo.svg";
 
 function Navbar() {
   return (
@@ -9,13 +9,13 @@ function Navbar() {
       <div className="navbar fixed top-0 left-0 w-full bg-white border-b-2 border-customYellow text-black z-50">
         <div className="navbar-start">
           <div>
-            {/* <Image
+            <Image
               src={Logo}
               width={50}
               height={50}
               className="image-full"
-              alt="CTX Travel Logo"
-            /> */}
+              alt="snapguard logo"
+            />
           </div>
         </div>
         <div className="navbar-end flex lg:hidden">

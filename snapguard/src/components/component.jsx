@@ -18,12 +18,12 @@ To read more about using these font, please visit the Next.js documentation:
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import placeholder from "@/assets/pl.png";
 import Head from "next/head";
+import Contact from "./contact";
+import image1 from "@/assets/1.jpg";
+import image2 from "@/assets/2.jpg";
 
 export function Component() {
   return (
@@ -62,7 +62,7 @@ export function Component() {
                 </div>
               </div>
               <Image
-                src={placeholder}
+                src={image2}
                 alt="Hero"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
                 height="550"
@@ -95,7 +95,7 @@ export function Component() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <Image
-                src={placeholder}
+                src={image1}
                 alt="Features"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
                 height="310"
@@ -186,14 +186,24 @@ export function Component() {
               </p>
             </div>
             <div className="w-full max-w-md space-y-4 bg-white ">
-              <form className="grid gap-4 ">
-                <Input className="w-full" placeholder="Name" type="text" />
-                <Input className="w-full" placeholder="Email" type="email" />
+              <Contact />
+              {/* <form
+                className="grid gap-4 "
+                action="https://api.web3forms.com/submit"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="cdca08c7-72e3-45df-bb42-e3f18216a816"
+                ></input>
+                <Input className="w-full" placeholder="Name" type="text" required />
+                <Input className="w-full" placeholder="Email" type="email" required/>
                 <Textarea className="w-full" placeholder="Message" />
                 <Button className="w-full" type="submit">
                   Submit
                 </Button>
-              </form>
+              </form> */}
             </div>
           </div>
         </section>
