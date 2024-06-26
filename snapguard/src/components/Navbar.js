@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import Logo from "@/assets/Snapguard logo.svg";
+import Logo from "@/assets/logo2.svg";
 
 function Navbar() {
   return (
@@ -11,8 +11,8 @@ function Navbar() {
           <div>
             <Image
               src={Logo}
-              width={50}
-              height={50}
+              width={40}
+              height={40}
               className="image-full"
               alt="snapguard logo"
             />

@@ -19,11 +19,10 @@ To read more about using these font, please visit the Next.js documentation:
 **/
 import Link from "next/link";
 import Image from "next/image";
-import placeholder from "@/assets/pl.png";
 import Head from "next/head";
 import Contact from "./contact";
-import image1 from "@/assets/1.jpg";
-import image2 from "@/assets/2.jpg";
+import image1 from "@/assets/3.jpg";
+import image2 from "@/assets/4.jpg";
 
 export function Component() {
   return (
@@ -38,7 +37,7 @@ export function Component() {
           content="Secure your digital content with SnapGuard's easy-to-integrate protection against unauthorized screenshots and screen recordings. Get a personalized quote today."
         />
       </Head>
-      <main className="flex-1 xl:px-10 bg-white text-black">
+      <main className="flex-1 xl:px-10 bg-white text-black ">
         <section className="w-full py-12 md:py-24 lg:py-32   " id="home">
           <div className="container px-4 md:px-6 max-w-screen-xl mx-auto ">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12  xl:pr-10 pt-6 ">
@@ -64,7 +63,7 @@ export function Component() {
               <Image
                 src={image2}
                 alt="Hero"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
+                className="mx-auto  overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
                 height="550"
                 width="550"
               />
@@ -97,7 +96,7 @@ export function Component() {
               <Image
                 src={image1}
                 alt="Features"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full sm:h-full lg:order-last"
                 height="310"
                 width="550"
               />
