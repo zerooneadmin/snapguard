@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import Logo from "@/assets/logo2.svg";
+import Logo from "@/assets/Snapguard logo web 2.svg";
 
 function Navbar() {
   return (

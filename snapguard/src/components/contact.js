@@ -14,8 +14,7 @@ export default function Contact() {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "cdca08c7-72e3-45df-bb42-e3f18216a816");
-
+    formData.append("access_key", "e7eade76-403c-4ed9-80c0-a6b11a2dafcc");
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
@@ -60,7 +59,7 @@ export default function Contact() {
           placeholder="Message"
           required
         ></Textarea>
-        <Button className="w-full" type="submit">
+        <Button className="w-full bg-gray-300" type="submit">
           Submit Form
         </Button>
       </form>
