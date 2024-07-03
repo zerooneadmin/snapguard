@@ -1,20 +1,14 @@
-"use client";
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import Modal from "./Modal";
-import { Component } from "./component";
+import Modal from "../Modal";
 
-export default function Contact() {
-  const [result, setResult] = useState("");
-  const [showModal, setShowModal] = useState(false);
-
+export default function Contact2({ closeModal, setShowModal, setResult }) {
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
-    // e7eade76-403c-4ed9-80c0-a6b11a2dafcc
     formData.append("access_key", "e7eade76-403c-4ed9-80c0-a6b11a2dafcc");
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -26,15 +20,12 @@ export default function Contact() {
     if (data.success) {
       setResult("Form Submitted Successfully");
       event.target.reset();
+      setShowModal(true); // Show the modal
+      closeModal(); // Close the dialog box
     } else {
       console.log("Error", data);
       setResult(data.message);
     }
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
   };
 
   return (
@@ -64,12 +55,6 @@ export default function Contact() {
           Submit Form
         </Button>
       </form>
-      <Modal
-        show={showModal}
-        message={result}
-        onClose={closeModal}
-        redirectUrl="#Component"
-      />
     </div>
   );
 }

@@ -1,14 +1,16 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import Contact from "./contact";
+import { useState, useEffect } from "react";
+import Contact2 from "./contact2";
+import Modal from "../Modal";
 
-const QuotationButton = () => {
+function QuotationButton() {
   const [isOpen, setIsOpen] = useState(false);
-  const modalRef = useRef(null);
+  const [showModal, setShowModal] = useState(false);
+  const [result, setResult] = useState("");
 
   const handleClickOutside = (event) => {
-    if (modalRef.current && !modalRef.current.contains(event.target)) {
+    if (!event.target.closest("#modalContent")) {
       setIsOpen(false);
     }
   };
@@ -33,18 +35,34 @@ const QuotationButton = () => {
         Get a Quotation
       </button>
       {isOpen && (
-        <dialog id="my_modal_1" className="modal bg-white text-black" open>
-          <div className="modal-box bg-white" ref={modalRef}>
+        <dialog
+          id="my_modal_1"
+          className="modal bg-black bg-opacity-70 text-black"
+          open
+        >
+          <div id="modalContent" className="modal-box bg-white">
             <h3 className="font-small text-lg pb-5">
               Please provide the following information, Our team will reach out
               to you within one business day
             </h3>
-            <Contact />
+            <Contact2
+              closeModal={() => setIsOpen(false)}
+              setShowModal={setShowModal}
+              setResult={setResult}
+            />
           </div>
         </dialog>
       )}
+      {showModal && (
+        <Modal
+          show={showModal}
+          message={result}
+          onClose={() => setShowModal(false)}
+          redirectUrl="/"
+        />
+      )}
     </div>
   );
-};
+}
 
 export default QuotationButton;

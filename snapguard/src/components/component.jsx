@@ -4,7 +4,7 @@ import Head from "next/head";
 import Contact from "./contact";
 import image1 from "@/assets/3.jpg";
 import image2 from "@/assets/4.jpg";
-import QuotationButton from "./QuotationButton";
+import QuotationButton from "./quotation/QuotationButton";
 
 export function Component() {
   return (
