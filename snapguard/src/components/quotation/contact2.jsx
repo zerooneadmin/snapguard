@@ -48,7 +48,7 @@ export default function Contact2({ closeModal, setShowModal, setResult }) {
         <Textarea
           className="w-full"
           name="message"
-          placeholder="Message"
+          placeholder="Brief description about the nature of your application"
           required
         ></Textarea>
         <Button className="w-full bg-gray-300" type="submit">
